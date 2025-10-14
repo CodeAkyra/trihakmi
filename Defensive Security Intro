@@ -1,0 +1,43 @@
+"Defensive Security", known as the "blue team", is used to prepare and proactively
+protect an organisation's IT infrastructure.
+  - Preventing intrusions from occuring
+  - Detecting intrusions when they occur and responding properly
+
+Some tasks that are involved in defensive security:
+  - Cyber Security Awareness
+      Training users about cyber security attacks, such as phising and social
+      engineering
+  - Documenting & Managing Assets
+      We must kniw the systems within the organisation to adequately protect them.
+  - Preventative Security
+      Firewalls and Intrusion Prevention Systems are the first line of defence.
+    These devices controll what traffic is allowed to enter and leave the network
+    and prevents malicious traffic from entering the network.
+  - Logging & Monitoring
+      Comprehensive logging of the network and system activity is essential in
+      detecting a threat or unauthorised activity.
+  - Framworks, Policies & Procedures
+     Creating robust security policies helps ensure that the organisation's
+      devices are used appropriately.
+
+Security Operations Centre (SOC)
+A Security Operations Centre (SOC) is a team of cyber security professionals 
+that monitors the network and is systems to detect malicious cyber security
+events.
+
+Some of the main areas of interest for a SOC are:
+  - Trends & Vulnerability
+      Keeping up to date with the latest trends and vulnerabilities in the industry
+is an essential skill to help understand the risks an organisation faces.
+  - Policy Violations
+      A security policy is a set of rules that outline how an organisation's assets
+are to be used and protected. The SOC team mnitors for adherence to these policies.
+  - Unauthorised & Illegal Activity
+      The SOC team establishes a baseline of acceptable behaviour and activity.
+      Any deviation from this baseline is investigated Illegal activity exposes the
+      organisation to higher risk.
+  - Intrusion & Breach Detection
+      No matter how well protected an organisation is, there is always a risk of a
+      breach. The SOC team is responsible for detecting and responding to these
+      breaches.
+ 
