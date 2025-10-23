@@ -22,4 +22,20 @@ Port Specification Options
     Port scan using name
   nmap -r ipaddress
     Sequential port scan
+
+Scanning Types
+  nmap -sS ipaddress
+    TCP SYN port scan or stealth scan, nag sesend ng SYN packet. if nag reply yung target ng SYN-ACK, open yung port, if RST, closed yung port. kaya siya stealh scan, kasi di niya kinocomplete yung handshake and mas less yung detection.
+  nmap -sT ipaddress
     
+  nmap -sA ipaddress
+      
+  nmap -sU ipaddress
+    
+  nmap -sF ipaddress
+    
+  nmap -sX ipaddress
+    
+  nmap -sP ipaddress
+    
+  nmap -sL ipaddress
