@@ -27,11 +27,11 @@ Scanning Types
   nmap -sS ipaddress
     TCP SYN port scan or stealth scan, nag sesend ng SYN packet. if nag reply yung target ng SYN-ACK, open yung port, if RST, closed yung port. kaya siya stealh scan, kasi di niya kinocomplete yung handshake and mas less yung detection.
   nmap -sT ipaddress
-    
+    TCP connect port scan or full TCP scan. Completes TCP three-way handshake, (SYN > SYN/ACK > ACK), pero mas madali siya ma detect since established yung connection
   nmap -sA ipaddress
-      
+    TCP ACK port scan. Nag sesend lang siya ng ACK packets to test firewall rules. It doesn't determine if a port is open or closed, pero nakaka detect siya if yung port is filtered/blocked or unflitered. If nag respond ng RST, unfiltered. No reply = filtered.
   nmap -sU ipaddress
-    
+    UDP port scan. nag sesend ng UDP packets instead of TCP. If no response, port might be open|filtered
   nmap -sF ipaddress
     
   nmap -sX ipaddress
