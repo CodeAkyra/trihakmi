@@ -1,0 +1,25 @@
+PAALALA!!!!
+Scanning IP addresses without explicit authorization is strictly prohibited
+
+__________________________________________________________________________________
+Target IP: 
+ipaddress: 45.33.32.156
+
+Port Specification Options
+  nmap -p 23 ipaddress
+    Port scanning port specific port 23 (telnet)
+  nmap -p 23-100 ipaddress
+    Port scanning port specific port range from 23 to 100
+  nmap -pU:110, T:23-25, 443 ipaddress
+    U-UDP, T-TCP different port types scan. pwede ka rin mag specify ng isa lang, either UDP or TCP then yung port and ip address
+  nmap -p- ipaddress
+    Port scan for all ports, dale lahat
+  nmap -p smtp, https ipaddress
+    Port scan from specified protocols, http, https, tfpt, ftp
+  nmap -F ipaddress
+    Fast port scan for speed up
+  nmap -p "*" ftp ipaddress
+    Port scan using name
+  nmap -r ipaddress
+    Sequential port scan
+    
