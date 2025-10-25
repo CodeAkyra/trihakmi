@@ -4,3 +4,11 @@ Incremental
   since naka full back up na, kung ano lang yung latest updat, yun yung babackup, ichecheck kung kelan ka nag incremental backup
 Differencial
   it checks kung kelan ka nag full back up
+
+
+DATACENTER
+
+1st drive is C://
+2nd drive is C:// Mirror
+3rd drive is Vulnerable
+Last drive is Spare
