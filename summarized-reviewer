@@ -85,3 +85,180 @@ What type of DHCP packet does a device send once it has been offered an IP addre
   DHCP Request
 Finally, what is the last DHCP packet that is sent to a device from a DHCP server?
   DHCP ACK
+
+OSI Model
+
+OSI Model or Open Systems Interconnection Model is an essential mdoel used in networking.
+It provides a framework dictating how a ll networked devices will send, recive and interpret data.
+
+It consists of seven layer and has a different set of responsibilities arranged from Layer 7 to Layer 1.
+
+  7. Application
+  6. Presentation
+  5. Session
+  4. Transport
+  3. Network
+  2. Data Link
+  1. Physical
+
+What does the "OSI" in "OSI Model" stand for?
+  Open Systems Interconnection
+How many layers (in digits) dose the OSI model have?
+  7
+What is the key term for when pieces of information get added to data?
+  Encapsulation
+
+PHYSICAL LAYER
+Refers to the physical components of the hardware used in networking.
+Devices use electrical signals to transfer data between each other in a binary numbering system (1's and 0's)
+
+What is the name of the numbering system that is both 0's and 1's?
+  Binary
+What is the name of the cable that are used to connect devices?
+  Ethernet Cables
+
+DATA LINK
+The data link layer is responsible for handling the physical addressing of data during transmission. 
+It takes packets from the network layer—which already contain the destination’s IP address—and adds the MAC (Media Access Control) address of the receiving device. 
+Every network-capable device has a Network Interface Card (NIC) with a unique MAC address assigned by the manufacturer. 
+These addresses are permanently encoded into the hardware, meaning they cannot be changed, though they can be spoofed.
+When data is transmitted across a network, it is the MAC address, not the IP address, that determines the exact destination at the physical level. 
+The data link layer is also responsible for formatting the data so it can be transmitted properly over the physical medium.
+
+What is the name of the peice of hardware that all networked devices come with?
+  NIC or Network Interface Card
+
+NETWORK
+The network layer (Layer 3) is responsible for routing data and reassembling smaller chunks into larger ones.
+Routing determines the most optimal path for data to travel across a network.
+Specific routing protocols like OSPF and RIP define what “optimal” means, though only their names need to be known at this level.
+Several factors influence the chosen route.
+One factor is the shortest path, meaning the route with the fewest devices or hops.
+Another factor is reliability, based on whether packets have previously been lost on that path.
+A third factor is the speed of the physical connection, such as copper being slower and fiber being faster.
+All operations at this layer use IP addresses like 192.168.1.100.
+Devices that forward packets based on IP addressing, such as routers, are known as Layer 3 devices because they operate at the third layer of the OSI model.
+
+Will packets take the most optimal route across a network? Yes or No?
+  Yes
+What does the acronym "OSPF" stand for?
+  Open Shortest Path First
+What does the acronym "RIP" stand for?
+  Routing Information Protocol
+What type of addresses are dealt with at this layer?
+  IP Addresses
+
+TRANSPORT
+
+Layer 4 of the OSI model is responsible for transmitting data across a network.
+This layer uses two main protocols:
+  TCP
+  UDP
+
+TCP stands for Transmission Control Protocol.
+  TCP focuses on reliability and guaranteed delivery.
+  TCP reserves a constant connection between the two devices for the entire duration of data transfer.
+  TCP includes error checking to ensure that data is received and reassembled in the correct order.
+
+Advantages of TCP:
+  Guarantees the accuracy of data.
+  Capable of synchronizing devices to prevent flooding.
+  Performs more processes to ensure reliability.
+  
+Disadvantages of TCP:
+  Requires a reliable connection between devices.
+  If one small chunk of data is missing, the entire chunk becomes unusable.
+  A slow connection can bottleneck the receiving device.
+  Significantly slower than UDP due to extra processes.
+
+TCP is used for file sharing, internet browsing, and email — situations where complete data is required.
+Data sent through TCP is broken into packets and reassembled correctly at the destination.
+
+UDP stands for User Datagram Protocol.
+  UDP is simpler and less advanced than TCP.
+  UDP does not offer error checking or guaranteed delivery.
+  UDP does not synchronize devices or establish a continuous connection.
+
+Advantages of UDP:
+  Much faster than TCP.
+  Leaves control of sending rate to the application layer.
+  Does not reserve a dedicated connection on the device.
+
+Disadvantages of UDP:
+  Does not care whether data is received or lost.
+  Unstable connections lead to poor user experience.
+
+With UDP, some packets may be missing, resulting in incomplete data (such as half an image).
+UDP is useful for small pieces of data like ARP and DHCP.
+UDP is also useful for streaming media where occasional lost data is acceptable (like pixelation).
+
+What does TCP stand for?
+  Transmission Control Protocol
+What does UDP stand for?
+  User Datagram Protocol
+What protocol guarantees the accuracy of data?
+  TCP
+What protocol doesn't care if data is received or not by the other device?
+  UDP
+What protocol would an application such as an email client use?
+  TCP
+What protocol would an application that downloads files use?
+  TCP
+What protocol would an application that streams video use?
+  UDP
+
+SESSION
+
+The session layer (Layer 5) creates and maintains the connection between computers once the data has been translated by the presentation layer.
+When a connection is established, a session is created.
+As long as the connection remains active, the session stays active.
+The session layer is responsible for closing the connection if it becomes idle or is lost.
+
+A session can include checkpoints:
+  Checkpoints allow only the newest pieces of data to be resent if information is lost.
+  This helps save bandwidth because not all data needs to be retransmitted.
+
+Sessions are unique.
+This means data cannot travel across multiple sessions.
+Data can only travel within the specific session that was created for that communication.
+
+What is the technical term for when a connection is succesfully established?
+  Session
+
+PRESENTATION
+
+Layer 6 of the OSI model is where standardization of data begins.
+This is important because different software developers can design applications differently.
+Despite these differences, the data must still be handled in a consistent way.
+
+This layer acts as a translator for data going to and from the application layer.
+It ensures the receiving computer can understand data even if it was created using different software.
+For example, when you send an email, the other user may use a different email client, but the message should still appear correctly.
+
+Security features occur at this layer, such as:
+  Data encryption
+  HTTPS when visiting secure websites
+
+What is the main purpose that this Layer acts as?
+  Translator
+
+APPLICATION
+
+The application layer of the OSI model is the layer users interact with most.
+This is because the application layer contains the protocols and rules that determine how users work with data that is sent or received.
+
+Everyday applications such as email clients, web browsers, and file-browsing software provide a GUI(Graphical User Interface) for users to access and manage data.
+
+Examples of application layer protocols include:
+  DNS (Domain Name System), which translates website names into IP addresses.
+
+What is the technical term that is given to the name of the software that users interact with?
+  GUI(Graphical User Interface)
+
+
+
+
+
+
+
+
