@@ -1,0 +1,119 @@
+continuation
+
+INTRODUCTION TO PORT FORWARDING
+Port forwarding is an essential component in connecting applications and services to the Internet.
+Without port forwarding, applications and services such as web servers are only available to devices within the same direct network.
+For example, a server with IP address 192.168.1.10 running a webserver on port 80 is only accessible to other devices within that network (an intranet).
+To make the webserver accessible to the public over the Internet, the administrator must implement port forwarding.
+With port forwarding, external devices can access the server using the public IP address of the network (e.g., 82.62.51.70).
+Port forwarding is sometimes confused with a firewall, but they are different:
+  Port forwarding opens specific ports to allow access.
+  Firewalls control and filter traffic that can travel across those ports.
+Port forwarding is configured on the router of a network.
+
+What is the name of the device that is used to configure port forwarding?
+  Router
+
+FIREWALLS 101
+A firewall is a device within a network responsible for determining what traffic is allowed to enter and exit.
+Think of a firewall as border security for a network.
+An administrator can configure a firewall to permit or deny traffic based on:
+  Where the traffic is coming from (accept/deny traffic from a specific network).
+  Where the traffic is going to (accept/deny traffic destined for a specific network).
+  What port the traffic is for (accept/deny traffic destined for a specific port like 80).
+  What protocol the traffic is using (accept/deny traffic using TCP, UDP, or both).
+Firewalls perform packet inspection to determine these rules.
+Firewalls come in many forms:
+    Dedicated hardware for large networks or businesses.
+  Residential routers for home networks.
+  Software-based firewalls like Snort.
+Firewalls can be categorized into 2 to 5 types, with two primary categories being:
+  Stateful Firewalls:
+    Uses the entire connection information rather than individual packets.
+    Determines device behavior based on the whole connection.
+    Consumes more resources than stateless firewalls because decision-making is dynamic.
+    Example: Allows initial parts of a TCP handshake but may later block the connection if it fails.
+    If a connection from a host is bad, it can block the entire device.
+  Stateless Firewalls:
+    Uses a static set of rules to determine if individual packets are acceptable.
+    Sending a bad packet does not necessarily block the entire device.
+    Consumes fewer resources than stateful firewalls.
+    Only as effective as the rules defined; unmatched traffic is not filtered.
+    Useful for handling large amounts of traffic from specific hosts, such as during a DDoS attack.
+
+What Layers of the OSI model do Firewalls operate at?
+  Layer 4 - Transport
+  Layer 3 - Network
+What category of firewall inspects the entire connection?
+  Stateful
+What category of firewall inspects individual packets?
+  Stateless
+
+VPN BASICS
+A Virtual Private Network (VPN) is a technology that allows devices on separate networks to communicate securely.
+VPNs create a dedicated path between devices over the Internet, known as a tunnel.
+Devices connected within this tunnel form their own private network.
+Normally, only devices within the same network (e.g., within a business) can communicate directly.
+A VPN allows devices from different offices to connect securely as if they were on the same network.
+For example, devices on Network #3 connected via a VPN are part of Network #1 and Network #2 but also form their own private network where only VPN-connected devices can communicate.
+Benefits of a VPN include:
+  Connecting geographically separate networks:
+    Businesses with multiple offices can access servers and infrastructure remotely.
+  Privacy:
+    VPNs use encryption to protect data, ensuring it is only understood by the sending and receiving devices.
+    Useful on public Wi-Fi to prevent others from sniffing your traffic.
+  Anonymity:
+    Journalists and activists can safely report from restricted countries.
+    Traffic may still be tracked by ISPs or intermediaries; the VPN’s effectiveness depends on privacy policies.
+  Example: TryHackMe uses VPNs to securely connect users to vulnerable machines without exposing them to the Internet.
+VPN technology has evolved over time and includes several protocols:
+  PPP (Point-to-Point Protocol):
+    Provides authentication and encryption using a private key and public certificate.
+    Cannot leave a network by itself (non-routable).
+  PPTP (Point-to-Point Tunneling Protocol):
+    Allows PPP-encrypted data to travel over networks.
+    Easy to set up and widely supported but weakly encrypted.
+  IPSec (Internet Protocol Security):
+    Encrypts data using the existing IP framework.
+    Strong encryption, widely supported, but more complex to configure.
+
+What VPN technology only encrypts & provides the authentication of data?
+  PPP or Point to Point Protocol
+What VPN technology uses the IP framework?
+  IPSec or Internet Protocol Security
+
+LAN NETWORKING DEVICES
+Router:
+  A router connects networks and passes data between them.
+  Routers perform routing, which is the process of creating a path for data to travel across networks.
+  Routers operate at Layer 3 of the OSI model.
+  They often include an interactive interface (website or console) for administrators to configure rules such as port forwarding or firewalls.
+  Routing helps choose the most optimal path when multiple paths exist between devices.
+  Factors that affect path selection include:
+    The shortest path (least number of devices between sender and receiver).
+    The most reliable path (path with least packet loss).
+    The fastest medium (copper vs. fibre).
+  Routers are dedicated devices and do not perform the same functions as switches.
+Switch:
+  A switch is a networking device that connects multiple devices together.
+  Switches can handle many devices, typically 3 to 63, using Ethernet cables.
+  Switches can operate at Layer 2 or Layer 3 of the OSI model.
+  Layer 2 switches forward frames to connected devices using MAC addresses.
+  Layer 2 switches are responsible only for sending frames to the correct device.
+  Layer 3 switches are more sophisticated:
+    They forward frames like Layer 2 switches.
+    They can also route packets using IP addresses, performing some router functions.
+  Example IP addresses in a Layer 3 switch setup: 192.168.1.1 and 192.168.2.1.
+  VLAN (Virtual Local Area Network) allows devices within a network to be virtually separated.
+  VLAN separation lets devices share resources (like Internet) while restricting communication between groups.
+  Example: "Sales Department" and "Accounting Department" can access the Internet but cannot communicate directly with each other, even though they are on the same switch.
+
+What is the verb for the action that a router does?
+  Routing
+What are the two different layers of switches?
+  Layer 3 - Network
+  Layer 2 - Data Link
+
+
+
+
