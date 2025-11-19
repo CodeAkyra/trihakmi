@@ -41,4 +41,47 @@ Subnetting is the term given term given to splitting up a network into smaller, 
     - Finance
 It is achieved by splitting up the number of hosts that can fit within the network, represented by a number called a subnet mask.
 
-  
+What is the technical term for dividing a network up into smaller pieces?
+  Subnetting
+How many bits are in a subnet mask?
+  32
+What is the range of a section (octet) of a subnet mask?
+  0-255
+What address is used to identify that start of a network?
+  Network Address
+What address is used to identify devices within a network?
+  Host Address
+What is the name used to identify the device responsible for sending data to another network?
+  Default Gateway
+
+ARP
+
+ARP or Address Resolution Protocol allows a device to associate its MAC(Media Access Control) address with an IP address on the network.
+Each device on a network will keep a log of the MAC addresses associated with other devices.
+When devices wish to communicate with another, they will send a broadcast to the entire network searching for the specific device.
+
+ARP sends two types of messages:
+  ARP Request, Wireshark ex., "Who has 192.168.1.100?". When the other devices receive that message, they will only respond if they own that IP address and will send an ARP reply with its MAC address.
+  ARP Reply, Wireshark ex., "192.168.1.100 is at 00:1A:2B:3C:4D:5E"
+The requesting device can now remember this mapping and store it in its ARP cahse for future use.
+
+What does ARP stand for?
+  Address Resolution Protocol
+What category of ARP Packet asks a device whether or not it has a specific IP address?
+  Request
+What address is used as a physical identifier for a device on a network?
+  MAC Address
+What address is used as a logical identifier for a device on a network?
+  IP Address
+
+DHCP
+
+IP addresses can be assigned either manually, by entering them physically into a device, or automatically and most commonly by using a DHCP (Dynamic Host Configuration Protocol) server.
+There is a process called DORA(Discover, Offer, Request, Acknowledge) in which a DHCP clients finds a DHCP server by sending out a request (Discover), then the DHCP server replies back with an IP address to the device could use (Offer), then the client sends a reply confirming it wants the offered IP address (Request), lastly, the DHCP server sends a reply acknowledging that the process is complete and now the client can now start using the IP address (Acknowledge).
+
+What type of DHCP packet is used by a device to retrieve an IP address?
+  DHCP Discover
+What type of DHCP packet does a device send once it has been offered an IP address by the DHCP server?
+  DHCP Request
+Finally, what is the last DHCP packet that is sent to a device from a DHCP server?
+  DHCP ACK
